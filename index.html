@@ -1,1 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAKA — Handmade Batiki & Linen | Uzunguni, Dodoma</title>
+<meta name="description" content="WAKA Boutique — Handmade Batiki and Linen couture from Uzunguni, Dodoma. A journal of fabric, form, and craft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   WAKA — VIVET-ENERGY EDITION
+   Editorial. Textured. Story-driven. Built for Dodoma.
+   ============================================================ */
 
+:root {
+  --ink: #14110E;
+  --ink-soft: #2A2520;
+  --paper: #EFE9DD;
+  --paper-warm: #E8DFCE;
+  --paper-dark: #D9CDB8;
+  --clay: #B8552E;
+  --clay-dark: #8E3F1F;
+  --moss: #4A5442;
+  --gold: #B8935A;
+  --bone: #F5F0E6;
+  --gray: #7A736A;
+  --whatsapp: #25D366;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
+
+::selection { background: var(--clay); color: var(--bone); }
+
+/* Subtle grain texture overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ ANNOUNCEMENT ============ */
+.announcement {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 10.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.announcement em { font-style: italic; color: var(--gold); font-family: var(--font-display); text-transform: none; letter-spacing: 0; font-size: 12px; }
+
+/* ============ HEADER ============ */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(239,233,221,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(20,17,14,0.08);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px;
+  max-width: 1440px; margin: 0 auto;
+}
+.logo { display: flex; align-items: center; gap: 14px; }
+.logo-mark {
+  width: 42px; height: 42px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: -0.5px; line-height: 1;
+  position: relative;
+}
+.logo-mark::after {
+  content: ''; position: absolute;
+  bottom: 9px; right: 10px;
+  width: 3px; height: 3px;
+  background: var(--ink); border-radius: 50%;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text strong {
+  font-family: var(--font-display);
+  font-size: 19px; font-weight: 500;
+  letter-spacing: 4px;
+}
+.logo-text small {
+  font-size: 8.5px; letter-spacing: 3px;
+  color: var(--gray); margin-top: 4px;
+  text-transform: uppercase; font-weight: 400;
+}
+
+.nav-links { display: none; }
+.nav-links a {
+  margin: 0 20px;
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 2px; text-transform: uppercase;
+  position: relative; padding: 6px 0;
+  transition: color 0.3s var(--ease);
+}
+.nav-links a::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px; background: var(--clay);
+  transform: scaleX(0); transform-origin: right;
+  transition: transform 0.4s var(--ease);
+}
+.nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.header-actions { display: flex; align-items: center; gap: 18px; }
+.icon-btn {
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.icon-btn svg { width: 19px; height: 19px; stroke-width: 1.3; stroke: var(--ink); fill: none; }
+.cart-count {
+  position: absolute; top: -6px; right: -8px;
+  background: var(--clay); color: var(--bone);
+  font-size: 9px; font-weight: 600;
+  min-width: 16px; height: 16px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 4px;
+  font-family: var(--font-body);
+}
+.mobile-menu-btn { display: flex; }
+
+@media (min-width: 900px) {
+  .nav-links { display: flex; }
+  .header-inner { padding: 24px 56px; }
+  .mobile-menu-btn { display: none; }
+}
+
+/* ============ MOBILE NAV ============ */
+.mobile-nav {
+  position: fixed; inset: 0;
+  background: var(--ink); color: var(--paper);
+  z-index: 250;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease);
+  padding: 32px 32px;
+  display: flex; flex-direction: column;
+}
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav-header {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 64px;
+}
+.mobile-nav-close {
+  font-size: 36px; font-weight: 200;
+  line-height: 1; color: var(--paper);
+}
+.mobile-nav a {
+  font-family: var(--font-display);
+  font-size: 40px; font-weight: 300;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(239,233,221,0.12);
+  font-style: italic;
+}
+.mobile-nav a:last-of-type { border-bottom: none; }
+
+/* ============ HERO ============ */
+.hero { background: var(--paper-warm); position: relative; overflow: hidden; }
+.hero-inner {
+  max-width: 1440px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr;
+}
+.hero-text {
+  padding: 72px 28px 60px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 28px;
+  display: flex; align-items: center; gap: 14px;
+  font-weight: 500;
+}
+.hero-eyebrow::before {
+  content: ''; width: 40px; height: 1px;
+  background: var(--clay);
+}
+.hero-text h1 {
+  font-size: 52px;
+  line-height: 0.98;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  margin-bottom: 28px;
+}
+.hero-text h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--clay);
+}
+.hero-text p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 40px;
+  max-width: 420px;
+  line-height: 1.65;
+  font-weight: 300;
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.hero-image {
+  position: relative;
+  min-height: 480px;
+  background: linear-gradient(160deg, #C7B69A 0%, #8B7355 60%, #4A3D2C 100%);
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding: 40px 28px;
+}
+.hero-image::before {
+  content: 'WAKA';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 120px;
+  font-weight: 300;
+  color: rgba(245,240,230,0.15);
+  letter-spacing: 16px;
+  font-style: italic;
+}
+.hero-image-caption {
+  position: relative;
+  color: var(--bone);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 280px;
+}
+.hero-image-caption::before {
+  content: '';
+  display: block;
+  width: 32px; height: 1px;
+  background: var(--bone);
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+.hero-image-caption small {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  opacity: 0.7;
+}
+
+@media (min-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr 1fr; min-height: 700px; }
+  .hero-text { padding: 100px 80px; }
+  .hero-text h1 { font-size: 82px; }
+  .hero-image { min-height: auto; padding: 64px 56px; }
+  .hero-image::before { font-size: 200px; letter-spacing: 24px; }
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px;
+  padding: 17px 34px;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  transition: all 0.35s var(--ease);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+}
+.btn-primary {
+  background: var(--ink); color: var(--paper);
+}
+.btn-primary::before {
+  content: ''; position: absolute;
+  inset: 0; background: var(--clay);
+  transform: translateY(101%);
+  transition: transform 0.4s var(--ease);
+  z-index: 0;
+}
+.btn-primary:hover::before { transform: translateY(0); }
+.btn-primary span { position: relative; z-index: 1; }
+.btn-outline {
+  background: transparent; color: var(--ink);
+  border-color: var(--ink);
+}
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
+.btn-whatsapp {
+  background: var(--whatsapp); color: white;
+  border-color: var(--whatsapp);
+}
+.btn-whatsapp:hover { background: #1DAF54; border-color: #1DAF54; }
+.btn-full { width: 100%; }
+
+/* ============ TRUST STRIP ============ */
+.trust-strip {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 22px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.trust-strip::-webkit-scrollbar { display: none; }
+.trust-strip-inner {
+  display: inline-flex; gap: 60px;
+  padding: 0 28px;
+  font-size: 10.5px; font-weight: 400;
+  letter-spacing: 2.5px; text-transform: uppercase;
+}
+.trust-item {
+  display: inline-flex; align-items: center; gap: 12px;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+.trust-item svg { width: 12px; height: 12px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+
+/* ============ EDITORIAL INTRO ============ */
+.editorial-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 28px 80px;
+  text-align: center;
+}
+.editorial-intro .eyebrow {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+.editorial-intro blockquote {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-style: italic;
+}
+.editorial-intro blockquote em {
+  font-style: normal;
+  color: var(--clay);
+  font-weight: 400;
+}
+.editorial-intro cite {
+  display: block;
+  margin-top: 36px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-style: normal;
+  font-weight: 400;
+}
+@media (min-width: 900px) {
+  .editorial-intro { padding: 140px 40px 100px; }
+  .editorial-intro blockquote { font-size: 42px; }
+}
+
+/* ============ SECTIONS ============ */
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+.section-head {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  flex-wrap: wrap; gap: 16px;
+  border-bottom: 1px solid rgba(20,17,14,0.1);
+  padding-bottom: 24px;
+}
+.section-head h2 {
+  font-size: 34px; font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.section-head h2 em { font-style: italic; color: var(--clay); }
+.section-head .section-meta {
+  font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 400;
+}
+.section-head a {
+  font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 3px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.section-head a:hover { color: var(--clay); border-color: var(--clay); }
+@media (min-width: 900px) {
+  .section { padding: 120px 56px; }
+  .section-head h2 { font-size: 52px; }
+  .section-head { margin-bottom: 64px; padding-bottom: 32px; }
+}
+
+/* ============ CATEGORIES ============ */
+.categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+.cat-tile {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--paper-warm);
+  display: flex; align-items: flex-end;
+  padding: 32px 24px;
+  transition: all 0.5s var(--ease);
+}
+.cat-tile::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,17,14,0.7) 0%, transparent 60%);
+  z-index: 1;
+  transition: opacity 0.4s;
+}
+.cat-tile-bg {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 100px; font-weight: 300;
+  font-style: italic;
+  color: rgba(20,17,14,0.08);
+  letter-spacing: 6px;
+  transition: transform 0.6s var(--ease);
+}
+.cat-tile:hover .cat-tile-bg { transform: scale(1.05); }
+.cat-tile-content { position: relative; z-index: 2; color: var(--bone); }
+.cat-tile-label {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 300;
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.cat-tile-count {
+  font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase; opacity: 0.7;
+}
+@media (min-width: 700px) {
+  .categories { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .categories { grid-template-columns: repeat(4, 1fr); }
+  .cat-tile { padding: 40px 32px; }
+  .cat-tile-label { font-size: 32px; }
+}
+
+/* ============ PRODUCT GRID ============ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 12px;
+}
+@media (min-width: 900px) {
+  .product-grid { grid-template-columns: repeat(4, 1fr); gap: 56px 24px; }
+}
+
+.product-card { position: relative; display: block; }
+.product-card-img {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: var(--paper-warm);
+  overflow: hidden;
+  margin-bottom: 18px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 300;
+  font-style: italic;
+  color: rgba(20,17,14,0.15);
+  letter-spacing: 4px;
+}
+.product-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease);
+}
+.product-card:hover .product-card-img img { transform: scale(1.04); }
+.product-badge {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--ink); color: var(--bone);
+  font-size: 9px; font-weight: 500;
+  padding: 6px 10px;
+  letter-spacing: 2px; text-transform: uppercase;
+  z-index: 2;
+}
+.product-badge.sale { background: var(--clay); }
+.product-badge.new { background: var(--moss); }
+
+.product-card-info h3 {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+.product-card-sub {
+  font-size: 10.5px; color: var(--gray);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.product-price {
+  font-size: 13.5px; font-weight: 500;
+  font-family: var(--font-body);
+}
+.product-price .old {
+  color: var(--gray);
+  text-decoration: line-through;
+  font-weight: 300; margin-right: 10px;
+}
+
+/* ============ JOURNAL SECTION ============ */
+.journal {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 100px 24px;
+}
+.journal-inner { max-width: 1440px; margin: 0 auto; }
+.journal-head {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  flex-wrap: wrap; gap: 16px;
+  border-bottom: 1px solid rgba(239,233,221,0.15);
+  padding-bottom: 24px;
+}
+.journal-head .eyebrow {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.journal-head h2 {
+  font-size: 40px; font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.journal-head h2 em { font-style: italic; color: var(--gold); }
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+.journal-entry {
+  display: flex; flex-direction: column;
+}
+.journal-entry-img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(160deg, #3A3226 0%, #1F1A15 100%);
+  margin-bottom: 24px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 48px; font-weight: 300;
+  font-style: italic;
+  color: rgba(239,233,221,0.12);
+  letter-spacing: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.journal-entry-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(184,147,90,0.15), transparent 60%);
+}
+.journal-entry-date {
+  font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.journal-entry h3 {
+  font-size: 24px; font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.journal-entry h3 em { font-style: italic; color: var(--gold); }
+.journal-entry p {
+  font-size: 14px; line-height: 1.7;
+  opacity: 0.75;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.journal-entry a {
+  font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(239,233,221,0.4);
+  padding-bottom: 3px;
+  align-self: flex-start;
+  font-weight: 500;
+  transition: color 0.2s, border-color 0.2s;
+}
+.journal-entry a:hover { color: var(--gold); border-color: var(--gold); }
+
+@media (min-width: 700px) {
+  .journal-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+}
+@media (min-width: 900px) {
+  .journal { padding: 140px 56px; }
+  .journal-head h2 { font-size: 56px; }
+}
+
+/* ============ STORY ============ */
+.story { background: var(--paper-warm); padding: 100px 24px; }
+.story-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr; gap: 48px;
+  align-items: center;
+}
+.story-image {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, #B09B7A 0%, #6B5942 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 80px; font-weight: 300;
+  font-style: italic;
+  color: rgba(245,240,230,0.2);
+  letter-spacing: 8px;
+  position: relative;
+}
+.story-image::after {
+  content: 'Journal 01';
+  position: absolute;
+  bottom: 24px; left: 24px;
+  font-family: var(--font-body);
+  font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--bone);
+  font-style: normal;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.story-eyebrow {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clay); margin-bottom: 24px;
+  font-weight: 500;
+}
+.story h2 {
+  font-size: 40px; line-height: 1.05;
+  margin-bottom: 28px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+.story h2 em { font-style: italic; color: var(--clay); font-weight: 400; }
+.story p {
+  font-size: 15px; line-height: 1.75;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.story p:last-of-type { margin-bottom: 32px; }
+@media (min-width: 900px) {
+  .story { padding: 140px 56px; }
+  .story-inner { grid-template-columns: 1fr 1fr; gap: 100px; }
+  .story h2 { font-size: 56px; }
+}
+
+/* ============ NEWSLETTER ============ */
+.newsletter {
+  background: var(--clay); color: var(--bone);
+  padding: 100px 24px;
+  text-align: center;
+}
+.newsletter .eyebrow {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.newsletter h2 {
+  font-size: 36px; font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.newsletter h2 em { font-style: italic; }
+.newsletter p {
+  font-size: 14px; opacity: 0.85;
+  margin-bottom: 40px;
+  max-width: 460px; margin-left: auto; margin-right: auto;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.newsletter-form {
+  display: flex; flex-direction: column;
+  gap: 2px; max-width: 480px; margin: 0 auto;
+}
+.newsletter-form input {
+  padding: 18px 22px;
+  background: var(--bone);
+  border: none;
+  color: var(--ink);
+  font-size: 14px; font-family: inherit;
+  font-weight: 400;
+}
+.newsletter-form input::placeholder { color: var(--gray); }
+.newsletter-form input:focus { outline: 2px solid var(--ink); outline-offset: -2px; }
+.newsletter-form button {
+  padding: 18px 24px;
+  background: var(--ink); color: var(--bone);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  transition: background 0.3s;
+}
+.newsletter-form button:hover { background: var(--ink-soft); }
+@media (min-width: 600px) {
+  .newsletter-form { flex-direction: row; }
+  .newsletter-form input { flex: 1; }
+  .newsletter { padding: 140px 56px; }
+  .newsletter h2 { font-size: 56px; }
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--ink); color: var(--paper);
+  padding: 80px 24px 120px;
+}
+.footer-inner { max-width: 1440px; margin: 0 auto; }
+.footer-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: 48px; margin-bottom: 64px;
+}
+@media (min-width: 700px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; }
+  .footer { padding: 120px 56px 56px; }
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+.footer-tagline {
+  font-size: 14px; line-height: 1.7;
+  opacity: 0.6; margin-bottom: 28px;
+  max-width: 340px;
+  font-weight: 300;
+}
+.footer h4 {
+  font-family: var(--font-body);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.footer a, .footer p {
+  font-size: 13px; line-height: 2.2;
+  color: rgba(239,233,221,0.6);
+  display: block;
+  transition: color 0.2s;
+  font-weight: 300;
+}
+.footer a:hover { color: var(--paper); }
+.footer-bottom {
+  border-top: 1px solid rgba(239,233,221,0.1);
+  padding-top: 32px;
+  display: flex; flex-direction: column;
+  gap: 16px;
+  font-size: 10.5px;
+  color: rgba(239,233,221,0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+@media (min-width: 700px) {
+  .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+.footer-bottom a { display: inline; margin-right: 24px; }
+
+/* ============ WHATSAPP FLOAT ============ */
+.whatsapp-float {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 56px; height: 56px;
+  background: var(--whatsapp);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 40px rgba(37,211,102,0.4);
+  z-index: 200;
+  transition: transform 0.3s var(--ease);
+}
+.whatsapp-float:hover { transform: scale(1.08) rotate(6deg); }
+.whatsapp-float svg { width: 26px; height: 26px; fill: white; }
+
+/* ============ CART DRAWER ============ */
+.cart-overlay {
+  position: fixed; inset: 0;
+  background: rgba(20,17,14,0.6);
+  z-index: 300;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+  backdrop-filter: blur(4px);
+}
+.cart-overlay.open { opacity: 1; pointer-events: auto; }
+
+.cart-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 100%; max-width: 460px;
+  background: var(--paper);
+  z-index: 301;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease);
+  display: flex; flex-direction: column;
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 28px 28px;
+  border-bottom: 1px solid rgba(20,17,14,0.08);
+}
+.cart-header h3 {
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
+  font-family: var(--font-body);
+}
+.cart-close {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; font-weight: 200;
+  color: var(--ink);
+  transition: transform 0.3s;
+}
+.cart-close:hover { transform: rotate(90deg); }
+.cart-items { flex: 1; overflow-y: auto; padding: 28px; }
+.cart-item {
+  display: grid; grid-template-columns: 90px 1fr;
+  gap: 20px; padding-bottom: 28px; margin-bottom: 28px;
+  border-bottom: 1px solid rgba(20,17,14,0.06);
+}
+.cart-item-img {
+  aspect-ratio: 4/5;
+  background: var(--paper-warm);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px; font-weight: 300;
+  font-style: italic;
+  color: rgba(20,17,14,0.2);
+  letter-spacing: 2px;
+}
+.cart-item-info h4 {
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  margin-bottom: 6px; line-height: 1.4;
+}
+.cart-item-meta {
+  font-size: 10.5px; color: var(--gray);
+  letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.cart-item-price { font-size: 13px; font-weight: 500; }
+.cart-qty {
+  display: inline-flex; align-items: center;
+  border: 1px solid rgba(20,17,14,0.15);
+  margin-top: 14px;
+}
+.cart-qty button {
+  width: 32px; height: 32px;
+  font-size: 14px; font-weight: 400;
+  display: flex; align-items: center; justify-content: center;
+}
+.cart-qty span { padding: 0 14px; font-size: 12px; font-weight: 500; }
+.cart-footer {
+  padding: 28px;
+  border-top: 1px solid rgba(20,17,14,0.08);
+  background: var(--paper-warm);
+}
+.cart-total {
+  display: flex; justify-content: space-between;
+  font-size: 15px; font-weight: 500; margin-bottom: 8px;
+  font-family: var(--font-body);
+}
+.cart-shipping-note {
+  font-size: 10.5px; color: var(--gray);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+.cart-empty { text-align: center; padding: 80px 20px; color: var(--gray); }
+.cart-empty p { font-size: 14px; margin-bottom: 28px; font-family: var(--font-display); font-style: italic; font-size: 20px; }
+
+/* ============ PDP ============ */
+.pdp { max-width: 1440px; margin: 0 auto; padding: 32px 24px; }
+@media (min-width: 900px) {
+  .pdp { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; padding: 80px 56px; }
+}
+.pdp-gallery { margin-bottom: 32px; }
+.pdp-main-img {
+  aspect-ratio: 4/5;
+  background: var(--paper-warm);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 72px; font-weight: 300;
+  font-style: italic;
+  color: rgba(20,17,14,0.12);
+  letter-spacing: 8px;
+  overflow: hidden;
+}
+.pdp-main-img img { width: 100%; height: 100%; object-fit: cover; }
+.pdp-thumbs {
+  display: flex; gap: 8px; margin-top: 12px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.pdp-thumbs::-webkit-scrollbar { display: none; }
+.pdp-thumb {
+  width: 72px; height: 90px;
+  flex-shrink: 0;
+  background: var(--paper-warm);
+  border: 1px solid transparent;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 300;
+  font-style: italic;
+  color: rgba(20,17,14,0.2);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.pdp-thumb.active { border-color: var(--ink); }
+
+.pdp-info { padding-top: 8px; }
+.pdp-title {
+  font-size: 40px; font-weight: 300;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+  line-height: 1.05;
+}
+.pdp-subtitle {
+  font-size: 10.5px; color: var(--gray);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.pdp-price {
+  font-size: 24px; font-weight: 400;
+  margin-bottom: 40px;
+  font-family: var(--font-display);
+}
+.pdp-price .old {
+  font-size: 18px; color: var(--gray);
+  text-decoration: line-through; font-weight: 300;
+  margin-right: 12px;
+}
+
+.pdp-section { margin-bottom: 32px; }
+.pdp-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.pdp-label a {
+  font-size: 10px; color: var(--clay);
+  letter-spacing: 1.5px;
+  font-weight: 500; text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+}
+
+.size-options { display: flex; gap: 8px; flex-wrap: wrap; }
+.size-btn {
+  min-width: 54px; height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(20,17,14,0.15);
+  background: transparent;
+  font-size: 12px; font-weight: 400;
+  letter-spacing: 1px;
+  transition: all 0.2s var(--ease);
+  font-family: var(--font-body);
+}
+.size-btn:hover { border-color: var(--ink); }
+.size-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.size-btn.sold-out { opacity: 0.3; text-decoration: line-through; cursor: not-allowed; }
+
+.color-options { display: flex; gap: 12px; }
+.color-swatch {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(20,17,14,0.15);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  position: relative;
+}
+.color-swatch.active {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--ink);
+}
+
+.pdp-actions { display: flex; flex-direction: column; gap: 10px; margin: 40px 0; }
+.pdp-actions .btn { padding: 20px 34px; font-size: 11px; }
+
+.pdp-fit-note {
+  background: var(--paper-warm);
+  padding: 20px 22px;
+  font-size: 13px; line-height: 1.75;
+  margin-bottom: 32px;
+  font-weight: 300;
+  border-left: 2px solid var(--clay);
+}
+.pdp-fit-note strong {
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--clay);
+}
+
+.pdp-accordion { border-top: 1px solid rgba(20,17,14,0.1); }
+.pdp-accordion details {
+  border-bottom: 1px solid rgba(20,17,14,0.1);
+  padding: 20px 0;
+}
+.pdp-accordion summary {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.pdp-accordion summary::-webkit-details-marker { display: none; }
+.pdp-accordion summary::after {
+  content: '+'; font-size: 20px; font-weight: 200;
+  color: var(--clay);
+}
+.pdp-accordion details[open] summary::after { content: '−'; }
+.pdp-accordion-content {
+  padding-top: 18px;
+  font-size: 13.5px; color: var(--ink-soft);
+  line-height: 1.75;
+  font-weight: 300;
+}
+.pdp-accordion-content table { width: 100%; border-collapse: collapse; }
+.pdp-accordion-content table td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(20,17,14,0.06);
+  font-size: 12.5px;
+}
+.pdp-accordion-content table td:last-child {
+  text-align: right; font-weight: 500; color: var(--ink);
+}
+
+.payment-icons {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 12px;
+}
+.payment-icon {
+  background: transparent;
+  border: 1px solid rgba(20,17,14,0.15);
+  padding: 8px 12px;
+  font-size: 9.5px; font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ UTILITIES ============ */
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT ============ -->
+<div class="announcement">
+  Handmade in Uzunguni, Dodoma · Free Dodoma delivery over <em>TZS 50,000</em>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">WA<br>KA</div>
+      <div class="logo-text">
+        <strong>WAKA</strong>
+        <small>Boutique · Dodoma</small>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#journal">Journal</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Cart" onclick="openCart()">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn mobile-menu-btn" onclick="openMobileNav()" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="logo">
+      <div class="logo-mark" style="border-color: var(--paper); color: var(--paper);">WA<br>KA</div>
+    </div>
+    <button class="mobile-nav-close" onclick="closeMobileNav()">×</button>
+  </div>
+  <a href="#shop" onclick="closeMobileNav()">Shop</a>
+  <a href="#journal" onclick="closeMobileNav()">Journal</a>
+  <a href="#story" onclick="closeMobileNav()">Our Story</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Volume 01 · 2025</div>
+      <h1>Worn with<br><em>intention.</em></h1>
+      <p>Handmade Batiki and Linen, cut and sewn in Uzunguni, Dodoma. Pieces that carry their making — and yours.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn btn-primary"><span>Shop the Collection</span></a>
+        <a href="https://wa.me/255700000000" class="btn btn-whatsapp" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-caption">
+        "Every piece begins with the fabric — and the fabric begins with the hand."
+        <small>Waka Studio · Uzunguni</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <span class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Handmade in Tanzania</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>M-Pesa · Tigo · Airtel · Halo</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Same-day Dodoma Delivery</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>7-Day Exchange</span>
+  </div>
+</div>
+
+<!-- ============ EDITORIAL INTRO ============ -->
+<section class="editorial-intro reveal">
+  <div class="eyebrow">The Waka Manifesto</div>
+  <blockquote>
+    We make clothes for people who <em>notice</em> — the weight of fabric, the fall of a hem, the print that doesn't repeat.
+  </blockquote>
+  <cite>— Waka Boutique, Volume 01</cite>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section reveal" id="shop">
+  <div class="section-head">
+    <div>
+      <div class="section-meta" style="margin-bottom:12px;">Volume 01 · The Collection</div>
+      <h2>Shop by <em>category</em></h2>
+    </div>
+    <a href="#all">View All</a>
+  </div>
+  <div class="categories" id="categoryGrid"></div>
+</section>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section class="section reveal">
+  <div class="section-head">
+    <div>
+      <div class="section-meta" style="margin-bottom:12px;">New this season</div>
+      <h2>Latest <em>arrivals</em></h2>
+    </div>
+    <a href="#all">View All</a>
+  </div>
+  <div class="product-grid" id="newArrivalsGrid"></div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section class="journal reveal" id="journal">
+  <div class="journal-inner">
+    <div class="journal-head">
+      <div>
+        <div class="eyebrow">From the Studio</div>
+        <h2>The <em>Journal</em></h2>
+      </div>
+      <a href="#all" style="font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;border-bottom:1px solid rgba(239,233,221,0.4);padding-bottom:3px;">Read all</a>
+    </div>
+    <div class="journal-grid">
+      <article class="journal-entry">
+        <div class="journal-entry-img">01</div>
+        <div class="journal-entry-date">Entry 01 · March 2025</div>
+        <h3>Finding the <em>fabric</em></h3>
+        <p>Where our Batiki comes from, and why the print never repeats.</p>
+        <a href="#entry-1">Read entry →</a>
+      </article>
+      <article class="journal-entry">
+        <div class="journal-entry-img">02</div>
+        <div class="journal-entry-date">Entry 02 · April 2025</div>
+        <h3>Cutting for <em>real bodies</em></h3>
+        <p>Why we measure every piece flat — and why it matters when you can't try on.</p>
+        <a href="#entry-2">Read entry →</a>
+      </article>
+      <article class="journal-entry">
+        <div class="journal-entry-img">03</div>
+        <div class="journal-entry-date">Entry 03 · May 2025</div>
+        <h3>The <em>slow</em> wardrobe</h3>
+        <p>On buying fewer, better pieces — and wearing them for years.</p>
+        <a href="#entry-3">Read entry →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story reveal" id="story">
+  <div class="story-inner">
+    <div class="story-image">WAKA</div>
+    <div>
+      <div class="story-eyebrow">Our Story</div>
+      <h2>Made in <em>Uzunguni</em>, worn everywhere.</h2>
+      <p>Waka began with a simple question: why does African fabric so often get treated as a trend, and not as craft?</p>
+      <p>We work with local fabric artisans and tailors in Dodoma. Every piece is cut, sewn, and finished in our studio. Nothing is mass-produced. Nothing is rushed.</p>
+      <p>The result is a wardrobe that carries its making — and yours. Clothes you'll wear for years, not seasons.</p>
+      <a href="#shop" class="btn btn-outline" style="margin-top:20px;"><span>Shop the Collection</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PDP ============ -->
+<section class="pdp" id="pdp">
+  <div class="pdp-gallery">
+    <div class="pdp-main-img" id="pdpMainImg">WAKA</div>
+    <div class="pdp-thumbs" id="pdpThumbs"></div>
+  </div>
+  <div class="pdp-info" id="pdpInfo"></div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter">
+  <div class="eyebrow">The Waka Circle</div>
+  <h2>Be first to <em>know.</em></h2>
+  <p>Early access to new drops, journal entries, and behind-the-scenes from the studio. No noise.</p>
+  <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welcome to the Circle. Check your inbox.');">
+    <input type="email" placeholder="your@email.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">WAKA</div>
+        <p class="footer-tagline">Handmade Batiki and Linen couture. Made in Uzunguni, Dodoma, Tanzania.</p>
+        <p style="font-size:12px;opacity:0.6;line-height:1.8;">
+          <strong style="opacity:1;color:var(--gold);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;">Studio</strong><br>
+          Uzunguni, Dodoma<br>
+          Mon–Sat · 9:00–18:00
+        </p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop">All Pieces</a>
+        <a href="#shop">Dresses</a>
+        <a href="#shop">Jumpsuits</a>
+        <a href="#shop">Two-Piece Sets</a>
+        <a href="#shop">Tops</a>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <a href="#entry-1">Finding the Fabric</a>
+        <a href="#entry-2">Cutting for Real Bodies</a>
+        <a href="#entry-3">The Slow Wardrobe</a>
+        <a href="#journal">All Entries</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="https://wa.me/255700000000" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/wakaboutique.tz" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@wakaboutique" target="_blank">TikTok</a>
+        <a href="mailto:hello@wakaboutique.co.tz">hello@wakaboutique.co.tz</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>©️ 2025 Waka Boutique · Uzunguni, Dodoma · TIN 123-456-789</div>
+      <div>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#refund">Refunds</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/255700000000?text=Hi%20Waka%20Boutique!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+</a>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Selection</h3>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty"><p>Nothing here yet.</p></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total"><span>Subtotal</span><span id="cartSubtotal">TZS 0</span></div>
+    <div class="cart-shipping-note">Shipping calculated at checkout. Free Dodoma delivery over TZS 50,000.</div>
+    <a href="#checkout" class="btn btn-primary btn-full" onclick="closeCart()"><span>Checkout</span></a>
+  </div>
+</aside>
+
+<script>
+/* ============================================================
+   WAKA — PRODUCT DATA
+   ============================================================
+   HOW TO EDIT:
+   1. Copy any product object, paste, edit fields
+   2. "images": [ "url1.jpg", "url2.jpg" ] — or [] for placeholder
+   3. "salePrice": null or a number
+   4. "isNew": true for New badge · "soldOut": true for Sold Out
+   ============================================================ */
+
+const WAKA_PRODUCTS = [
+  {
+    id: "kitenge-wrap-dress",
+    name: "Kitenge Wrap Dress",
+    subtitle: "Handmade · Cotton Batiki",
+    category: "Dresses",
+    price: 85000,
+    salePrice: null,
+    isNew: true,
+    soldOut: false,
+    description: "A flattering wrap silhouette cut from hand-printed Batiki cotton. Adjustable tie waist, midi length, and a print that never repeats. Made to order in our Dodoma studio.",
+    fabric: "100% Cotton Batiki",
+    care: "Machine wash cold, hang dry, warm iron",
+    fit: "True to size. Model is 5'6\" (168cm), wearing size M.",
+    measurements: { Bust: 92, Waist: 74, Hip: 98, Length: 105 },
+    images: [],
+    colors: [
+      { name: "Multi", hex: "#B8552E" },
+      { name: "Indigo", hex: "#2C3E5C" },
+      { name: "Olive", hex: "#5A6B4A" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    soldOutSizes: ["XXL"]
+  },
+  {
+    id: "linen-wide-leg-pants",
+    name: "Linen Wide-Leg Pants",
+    subtitle: "Handmade · Pure Linen",
+    category: "Two-Piece Sets",
+    price: 75000,
+    salePrice: 60000,
+    isNew: false,
+    soldOut: false,
+    description: "Relaxed wide-leg trousers in breathable pure linen. High waist, side pockets, and a drape that moves beautifully. Pairs with our matching boxy top.",
+    fabric: "100% Linen",
+    care: "Hand wash or dry clean, cool iron",
+    fit: "Relaxed fit. Size down for a closer cut.",
+    measurements: { Waist: 70, Hip: 100, Inseam: 72, Rise: 30 },
+    images: [],
+    colors: [
+      { name: "Cream", hex: "#F4EEE2" },
+      { name: "Sand", hex: "#D4C4AE" },
+      { name: "Ink", hex: "#1A1614" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    soldOutSizes: []
+  },
+  {
+    id: "boxy-cotton-shirt",
+    name: "Boxy Cotton Shirt",
+    subtitle: "Handmade · Cotton",
+    category: "Tops",
+    price: 55000,
+    salePrice: null,
+    isNew: false,
+    soldOut: false,
+    description: "A structured, boxy shirt with dropped shoulders and a cropped hem. Made from soft breathable cotton. Wear buttoned, open, or tied at the waist.",
+    fabric: "100% Cotton",
+    care: "Machine wash cold, hang dry",
+    fit: "Oversized. Size down for a regular fit.",
+    measurements: { Bust: 108, Length: 58, Sleeve: 24 },
+    images: [],
+    colors: [
+      { name: "Bone", hex: "#F5F0E6" },
+      { name: "Ink", hex: "#1A1614" },
+      { name: "Clay", hex: "#B8552E" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    soldOutSizes: []
+  },
+  {
+    id: "ankara-midi-skirt",
+    name: "Ankara Midi Skirt",
+    subtitle: "Handmade · Wax Print",
+    category: "Dresses",
+    price: 70000,
+    salePrice: null,
+    isNew: true,
+    soldOut: false,
+    description: "A full, flowing midi skirt in vibrant Ankara wax print. Elasticated waist for comfort, side zip for a clean finish. Bold, joyful, and made to turn heads.",
+    fabric: "100% Cotton Wax Print",
+    care: "Hand wash cold separately, hang dry",
+    fit: "True to size. Elasticated waist.",
+    measurements: { Waist: 68, Hip: 104, Length: 78 },
+    images: [],
+    colors: [
+      { name: "Multi", hex: "#B8552E" },
+      { name: "Indigo", hex: "#2C3E5C" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    soldOutSizes: ["XS"]
+  },
+  {
+    id: "structured-jumpsuit",
+    name: "Structured Jumpsuit",
+    subtitle: "Handmade · Batiki Cotton",
+    category: "Jumpsuits",
+    price: 95000,
+    salePrice: null,
+    isNew: true,
+    soldOut: false,
+    description: "Our signature jumpsuit — a bold flare leg, defined waist, and dramatic print. Cut from hand-printed Batiki cotton. One piece, endless presence.",
+    fabric: "100% Cotton Batiki",
+    care: "Machine wash cold, hang dry",
+    fit: "True to size. Fitted at waist, wide through leg.",
+    measurements: { Bust: 90, Waist: 72, Hip: 98, Inseam: 78 },
+    images: [],
+    colors: [
+      { name: "Clay Print", hex: "#8E3F1F" },
+      { name: "Moss Print", hex: "#4A5442" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    soldOutSizes: []
+  },
+  {
+    id: "matching-two-piece",
+    name: "Matching Two-Piece Set",
+    subtitle: "Handmade · Batiki + Linen",
+    category: "Two-Piece Sets",
+    price: 110000,
+    salePrice: null,
+    isNew: false,
+    soldOut: false,
+    description: "A coordinated set — structured top paired with wide-leg trousers. Wear together for impact, or separately to stretch your wardrobe. Cut from our signature Batiki cotton.",
+    fabric: "100% Cotton Batiki",
+    care: "Machine wash cold, hang dry",
+    fit: "True to size.",
+    measurements: { Bust: 96, Waist: 74, Hip: 102, Length: 105 },
+    images: [],
+    colors: [
+      { name: "Clay Print", hex: "#B8552E" },
+      { name: "Indigo Print", hex: "#2C3E5C" }
+    ],
+    sizes: ["S", "M", "L"],
+    soldOutSizes: []
+  },
+  {
+    id: "linen-midi-dress",
+    name: "Linen Midi Dress",
+    subtitle: "Handmade · Pure Linen",
+    category: "Dresses",
+    price: 92000,
+    salePrice: null,
+    isNew: false,
+    soldOut: false,
+    description: "A clean, minimal midi dress in heavyweight linen. Square neckline, fitted bodice, and a subtle side slit. The kind of dress you'll reach for again and again.",
+    fabric: "100% Linen",
+    care: "Hand wash or dry clean",
+    fit: "True to size. Fitted through bodice.",
+    measurements: { Bust: 88, Waist: 70, Hip: 96, Length: 112 },
+    images: [],
+    colors: [
+      { name: "Bone", hex: "#F5F0E6" },
+      { name: "Ink", hex: "#1A1614" },
+      { name: "Moss", hex: "#4A5442" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    soldOutSizes: []
+  },
+  {
+    id: "crop-top",
+    name: "Structured Crop Top",
+    subtitle: "Handmade · Cotton",
+    category: "Tops",
+    price: 45000,
+    salePrice: null,
+    isNew: false,
+    soldOut: false,
+    description: "A fitted crop top with a square neckline and structured seams. Cut from soft cotton. Pairs perfectly with our linen wide-leg pants or high-waist skirts.",
+    fabric: "100% Cotton",
+    care: "Machine wash cold, hang dry",
+    fit: "Fitted. Size up if between sizes.",
+    measurements: { Bust: 84, Length: 42 },
+    images: [],
+    colors: [
+      { name: "Bone", hex: "#F5F0E6" },
+      { name: "Ink", hex: "#1A1614" },
+      { name: "Clay", hex: "#B8552E" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    soldOutSizes: []
+  }
+];
+
+const WAKA_CATEGORIES = [
+  { name: "Dresses",        label: "Dresses",        bg: "#B8552E" },
+  { name: "Jumpsuits",      label: "Jumpsuits",      bg: "#4A5442" },
+  { name: "Two-Piece Sets", label: "Two-Piece Sets", bg: "#2C3E5C" },
+  { name: "Tops",           label: "Tops",           bg: "#8E6F4F" }
+];
+
+const WAKA_CONFIG = {
+  whatsapp: "255700000000",
+  currency: "TZS",
+  freeShippingThreshold: 50000,
+  studioAddress: "Uzunguni, Dodoma, Tanzania"
+};
+
+/* ============================================================
+   RENDERING — No need to edit below unless comfortable
+   ============================================================ */
+
+function formatPrice(n) {
+  return WAKA_CONFIG.currency + " " + n.toLocaleString('en-US');
+}
+
+function productImageHTML(product) {
+  if (product.images && product.images.length > 0) {
+    return '<img src="' + product.images[0] + '" alt="' + product.name + '" loading="lazy">';
+  }
+  return 'WAKA';
+}
+
+function renderCategories() {
+  const grid = document.getElementById('categoryGrid');
+  grid.innerHTML = WAKA_CATEGORIES.map(cat => {
+    const count = WAKA_PRODUCTS.filter(p => p.category === cat.name).length;
+    return `
+      <a href="#shop" class="cat-tile" onclick="event.preventDefault();viewCategory('${cat.name}')">
+        <div class="cat-tile-bg">${cat.name.charAt(0)}</div>
+        <div class="cat-tile-content">
+          <div class="cat-tile-label">${cat.label}</div>
+          <div class="cat-tile-count">${count} piece${count !== 1 ? 's' : ''}</div>
+        </div>
+      </a>
+    `;
+  }).join('');
+}
+
+function renderProductCard(product) {
+  const displayPrice = product.salePrice || product.price;
+  let priceHTML = '';
+  if (product.salePrice) {
+    priceHTML = `<span class="old">${formatPrice(product.price)}</span>${formatPrice(product.salePrice)}`;
+  } else {
+    priceHTML = formatPrice(product.price);
+  }
+
+  let badgeHTML = '';
+  if (product.soldOut) {
+    badgeHTML = '<span class="product-badge">Sold Out</span>';
+  } else if (product.isNew) {
+    badgeHTML = '<span class="product-badge new">New</span>';
+  } else if (product.salePrice) {
+    badgeHTML = '<span class="product-badge sale">Sale</span>';
+  }
+
+  return `
+    <a href="#pdp" class="product-card" onclick="event.preventDefault();viewProduct('${product.id}')">
+      <div class="product-card-img">
+        ${productImageHTML(product)}
+        ${badgeHTML}
+      </div>
+      <div class="product-card-info">
+        <h3>${product.name}</h3>
+        <div class="product-card-sub">${product.subtitle}</div>
+        <div class="product-price">${priceHTML}</div>
+      </div>
+    </a>
+  `;
+}
+
+function renderNewArrivals() {
+  const grid = document.getElementById('newArrivalsGrid');
+  const items = WAKA_PRODUCTS.filter(p => !p.soldOut).slice(0, 8);
+  grid.innerHTML = items.map(renderProductCard).join('');
+}
+
+let currentProduct = null;
+
+function viewProduct(id) {
+  currentProduct = WAKA_PRODUCTS.find(p => p.id === id);
+  if (!currentProduct) return;
+  renderPDP(currentProduct);
+  setTimeout(() => {
+    document.getElementById('pdp').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+}
+
+function viewCategory(cat) {
+  document.getElementById('newArrivalsGrid').innerHTML =
+    WAKA_PRODUCTS.filter(p => p.category === cat).map(renderProductCard).join('');
+  document.getElementById('newArrivalsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderPDP(product) {
+  const mainImg = document.getElementById('pdpMainImg');
+  if (product.images && product.images.length > 0) {
+    mainImg.innerHTML = '<img src="' + product.images[0] + '" alt="' + product.name + '">';
+  } else {
+    mainImg.textContent = 'WAKA';
+  }
+
+  const thumbs = document.getElementById('pdpThumbs');
+  const imgCount = Math.max(product.images.length, 4);
+  thumbs.innerHTML = Array.from({ length: imgCount }, (_, i) => `
+    <div class="pdp-thumb ${i === 0 ? 'active' : ''}" onclick="selectThumb(this, ${i})">${i + 1}</div>
+  `).join('');
+
+  const info = document.getElementById('pdpInfo');
+  const displayPrice = product.salePrice || product.price;
+
+  let priceHTML = '';
+  if (product.salePrice) {
+    priceHTML = `<span class="old">${formatPrice(product.price)}</span>${formatPrice(product.salePrice)}`;
+  } else {
+    priceHTML = formatPrice(product.price);
+  }
+
+  const sizeBtns = product.sizes.map(s => {
+    const soldOut = product.soldOutSizes.includes(s);
+    return `<button class="size-btn ${soldOut ? 'sold-out' : ''}" ${soldOut ? 'disabled' : ''} onclick="selectSize(this, '${s}')">${s}</button>`;
+  }).join('');
+
+  const colorBtns = product.colors.map((c, i) => `
+    <button class="color-swatch ${i === 0 ? 'active' : ''}"
+            style="background:${c.hex}"
+            onclick="selectColor(this, '${c.name}')"
+            aria-label="${c.name}"></button>
+  `).join('');
+
+  const measurementsHTML = Object.entries(product.measurements)
+    .map(([k, v]) => `<tr><td>${k}</td><td>${v} cm</td></tr>`).join('');
+
+  const whatsappMsg = encodeURIComponent(
+    `Hi Waka Boutique! I'm interested in the ${product.name}. Please confirm availability.`
+  );
+
+  info.innerHTML = `
+    <h1 class="pdp-title">${product.name}</h1>
+    <div class="pdp-subtitle">${product.subtitle}</div>
+    <div class="pdp-price">${priceHTML}</div>
+
+    <div class="pdp-section">
+      <div class="pdp-label">Color · <span id="colorName">${product.colors[0].name}</span></div>
+      <div class="color-options">${colorBtns}</div>
+    </div>
+
+    <div class="pdp-section">
+      <div class="pdp-label">
+        Size · <span id="sizeName">${product.sizes[2] || product.sizes[0]}</span>
+        <a href="#" onclick="event.preventDefault();alert('Size guide opens here.')">Size Guide</a>
+      </div>
+      <div class="size-options">${sizeBtns}</div>
+    </div>
+
+    <div class="pdp-fit-note">
+      <strong>Fit</strong> ${product.fit}<br>
+      <strong>Fabric</strong> ${product.fabric}
+    </div>
+
+    <div class="pdp-actions">
+      <button class="btn btn-primary btn-full" onclick="addToCart('${product.id}')">
+        <span>Add to Cart — ${formatPrice(displayPrice)}</span>
+      </button>
+      <a href="https://wa.me/${WAKA_CONFIG.whatsapp}?text=${whatsappMsg}"
+         class="btn btn-whatsapp btn-full" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <div class="payment-icons">
+      <span class="payment-icon">M-Pesa</span>
+      <span class="payment-icon">Tigo Pesa</span>
+      <span class="payment-icon">Airtel</span>
+      <span class="payment-icon">Halopesa</span>
+      <span class="payment-icon">Card</span>
+      <span class="payment-icon">Cash on Delivery</span>
+    </div>
+
+    <div class="pdp-accordion" style="margin-top:36px;">
+      <details open>
+        <summary>Description</summary>
+        <div class="pdp-accordion-content">${product.description}</div>
+      </details>
+      <details>
+        <summary>Measurements</summary>
+        <div class="pdp-accordion-content">
+          <table>${measurementsHTML}</table>
+          <p style="margin-top:14px;font-size:12px;">All measurements in centimeters. Garment measured flat.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Care</summary>
+        <div class="pdp-accordion-content">${product.care}</div>
+      </details>
+      <details>
+        <summary>Delivery</summary>
+        <div class="pdp-accordion-content">
+          <strong>Dodoma</strong> · Same-day boda (order before 3pm) — TZS 3,000<br>
+          <strong>Dar · Arusha · Mwanza</strong> · 1–2 days via bus parcel — TZS 8,000<br>
+          <strong>Other regions</strong> · 3–5 days — TZS 12,000<br>
+          <strong>Free</strong> on Dodoma orders over ${formatPrice(WAKA_CONFIG.freeShippingThreshold)}.
+        </div>
+      </details>
+      <details>
+        <summary>Returns & Exchange</summary>
+        <div class="pdp-accordion-content">
+          7-day exchange on unworn items with tags intact. Customer pays return shipping unless item is defective. Refunds processed within 3–7 business days.
+        </div>
+      </details>
+    </div>
+  `;
+}
+
+function selectThumb(el, idx) {
+  document.querySelectorAll('.pdp-thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  if (currentProduct && currentProduct.images[idx]) {
+    document.getElementById('pdpMainImg').innerHTML =
+      '<img src="' + currentProduct.images[idx] + '" alt="' + currentProduct.name + '">';
+  }
+}
+
+function selectSize(btn, size) {
+  if (btn.classList.contains('sold-out')) return;
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sizeName').textContent = size;
+}
+
+function selectColor(btn, name) {
+  document.querySelectorAll('.color-swatch').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('colorName').textContent = name;
+}
+
+/* ---- Cart ---- */
+let cart = [];
+
+function openCart() {
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function addToCart(productId) {
+  const product = WAKA_PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
+
+  const size = document.getElementById('sizeName')?.textContent || product.sizes[0];
+  const color = document.getElementById('colorName')?.textContent || product.colors[0].name;
+  const price = product.salePrice || product.price;
+
+  const existing = cart.find(i => i.id === productId && i.size === size && i.color === color);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ id: productId, name: product.name, size, color, price, qty: 1 });
+  }
+  renderCart();
+  openCart();
+}
+
+function renderCart() {
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+  const countEl = document.getElementById('cartCount');
+
+  const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+  countEl.textContent = totalQty;
+
+  if (cart.length === 0) {
+    itemsEl.innerHTML = `<div class="cart-empty"><p>Nothing here yet.</p></div>`;
+    footerEl.style.display = 'none';
+    return;
+  }
+
+  itemsEl.innerHTML = cart.map((item, idx) => `
+    <div class="cart-item">
+      <div class="cart-item-img">WAKA</div>
+      <div class="cart-item-info">
+        <h4>${item.name}</h4>
+        <div class="cart-item-meta">${item.size} · ${item.color}</div>
+        <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
+        <div class="cart-qty">
+          <button onclick="updateQty(${idx}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="updateQty(${idx}, 1)">+</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  document.getElementById('cartSubtotal').textContent = formatPrice(subtotal);
+  footerEl.style.display = 'block';
+}
+
+function updateQty(idx, delta) {
+  cart[idx].qty += delta;
+  if (cart[idx].qty <= 0) cart.splice(idx, 1);
+  renderCart();
+}
+
+/* ---- Mobile Nav ---- */
+function openMobileNav() {
+  document.getElementById('mobileNav').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ---- Reveal on scroll ---- */
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+/* ---- Init ---- */
+document.addEventListener('DOMContentLoaded', () => {
+  renderCategories();
+  renderNewArrivals();
+  renderPDP(WAKA_PRODUCTS[0]);
+  renderCart();
+  initReveal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { closeCart(); closeMobileNav(); }
+});
+</script>
+
+</body>
+</html>
+const WAKA_CONFIG = {
+  whatsapp: "255700000000",        // ← your real number
+  currency: "TZS",
+  freeShippingThreshold: 50000,
+  studioAddress: "Uzunguni, Dodoma, Tanzania"
+};
