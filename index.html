@@ -510,7 +510,34 @@ body::before {
 }
 .journal-entry a:hover { color: var(--gold); border-color: var(--gold); }
 
-@media (min-width: 700px) { .journal-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+@media (min-width: 700px) { .journal-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; } }
+@media (min-width: 1100px) { .journal-grid { grid-template-columns: repeat(4, 1fr); gap: 32px; } }
+.journal-entry-img.mzc { background: #0B2027; flex-direction: column; gap: 14px; color: #E8DFD0; font-family: 'Archivo Black', Impact, sans-serif; font-style: normal; font-size: 40px; letter-spacing: -1px; }
+.journal-entry-img.mzc::before { content: ''; display: block; order: 2; width: 60%; height: 4px; background: #FF5A3C; border-radius: 2px; }
+.journal-entry-img.mzc small { order: 3; font-family: var(--font-body); font-size: 10px; letter-spacing: 4px; opacity: 0.8; }
+.journal-entry button.read-btn { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; border-bottom: 1px solid rgba(239,233,221,0.4); padding-bottom: 3px; align-self: flex-start; font-weight: 500; transition: color 0.2s, border-color 0.2s; }
+.journal-entry button.read-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ============ JOURNAL READER ============ */
+.reader { position: fixed; inset: 0; background: #0B2027; color: #E8DFD0; z-index: 400; overflow-y: auto; transform: translateY(100%); transition: transform 0.5s var(--ease); }
+.reader.open { transform: translateY(0); }
+.reader-bar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: rgba(11,32,39,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(232,223,208,0.12); font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; }
+.reader-bar button { font-size: 30px; font-weight: 200; line-height: 1; color: #E8DFD0; }
+.reader-inner { max-width: 760px; margin: 0 auto; padding: 56px 24px 120px; }
+.reader-cover { text-align: center; padding: 40px 0 56px; border-bottom: 1px solid rgba(232,223,208,0.12); margin-bottom: 40px; }
+.reader-cover h1 { font-family: 'Archivo Black', Impact, sans-serif; font-size: 56px; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
+.reader-cover .line { width: 120px; height: 5px; background: #FF5A3C; border-radius: 3px; margin: 0 auto 20px; }
+.reader-cover p { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.8; line-height: 2; }
+.reader-sec { margin-bottom: 44px; }
+.reader-sec h2 { font-family: 'Archivo Black', Impact, sans-serif; font-size: 24px; letter-spacing: -0.5px; margin-bottom: 8px; text-transform: uppercase; }
+.reader-sec h2 span { color: #FF5A3C; margin-right: 10px; }
+.reader-sec .u { width: 48px; height: 3px; background: #FF5A3C; margin-bottom: 18px; }
+.reader-sec p, .reader-sec li { font-size: 14.5px; line-height: 1.75; font-weight: 300; opacity: 0.92; }
+.reader-sec p { margin-bottom: 12px; }
+.reader-sec ul { padding-left: 20px; margin-bottom: 12px; }
+.reader-sec strong { font-weight: 600; color: #F5F1E8; }
+.reader-sec em { color: #FF5A3C; font-style: normal; }
+.reader-end { text-align: center; padding-top: 40px; border-top: 1px solid rgba(232,223,208,0.12); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; line-height: 2.2; opacity: 0.8; }
 @media (min-width: 900px) {
   .journal { padding: 140px 56px; }
   .journal-head h2 { font-size: 56px; }
@@ -828,7 +855,7 @@ body::before {
       <p>Handmade Batiki and Linen, cut and sewn in Uzunguni, Dodoma. Pieces that carry their making — and yours.</p>
       <div class="hero-cta">
         <a href="#shop" class="btn btn-primary"><span>Shop the Collection</span></a>
-        <a href="https://wa.me/255657311976" class="btn btn-whatsapp" target="_blank">
+        <a href="https://wa.me/255700000000" class="btn btn-whatsapp" target="_blank">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
           WhatsApp
         </a>
@@ -913,9 +940,21 @@ body::before {
         <p>On buying fewer, better pieces — and wearing them for years.</p>
         <a href="#entry-3">Read entry →</a>
       </article>
+      <article class="journal-entry">
+        <div class="journal-entry-img mzc">MZIZIMA<small>VOLUME 001</small></div>
+        <div class="journal-entry-date">Entry 04 · The Founding Journal</div>
+        <h3>The <em>Mzizima</em> journal</h3>
+        <p>One world. One collective. The brand, the business and the plan behind a youth movement founded in Dar es Salaam.</p>
+        <button class="read-btn" onclick="openReader()">Read entry →</button>
+      </article>
     </div>
   </div>
 </section>
+
+<div class="reader" id="reader" aria-hidden="true">
+  <div class="reader-bar"><span>The Mzizima Journal · Vol. 001</span><button onclick="closeReader()" aria-label="Close">×</button></div>
+  <div class="reader-inner" id="readerInner"></div>
+</div>
 
 <section class="story reveal" id="story">
   <div class="story-inner">
@@ -978,7 +1017,7 @@ body::before {
       </div>
       <div>
         <h4>Connect</h4>
-        <a href="https://wa.me/255657311976" target="_blank">WhatsApp</a>
+        <a href="https://wa.me/255700000000" target="_blank">WhatsApp</a>
         <a href="https://instagram.com/wakaboutique.tz" target="_blank">Instagram</a>
         <a href="https://tiktok.com/@wakaboutique" target="_blank">TikTok</a>
         <a href="mailto:hello@wakaboutique.co.tz">hello@wakaboutique.co.tz</a>
@@ -995,7 +1034,7 @@ body::before {
   </div>
 </footer>
 
-<a href="https://wa.me/25573113976?text=Hi%20Waka%20Boutique!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/255700000000?text=Hi%20Waka%20Boutique!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
 </a>
 
@@ -1281,7 +1320,7 @@ const WAKA_CATEGORIES = [
 ];
 
 const WAKA_CONFIG = {
-  whatsapp: "255657311976",
+  whatsapp: "255700000000",
   currency: "TZS",
   freeShippingThreshold: 50000,
   studioAddress: "Uzunguni, Dodoma, Tanzania"
@@ -1601,6 +1640,74 @@ function updateQty(idx, delta) {
   renderCart();
 }
 
+
+/* ---- The Mzizima Journal (Volume 001) ---- */
+const MZC_SECTIONS = [
+  ["The Brand", `<p><strong>Mzizima Collective</strong> (MZIZIMA / MZC, pronounced M-zee-zee-ma). <em>Mzizima</em> was the original name of Dar es Salaam, meaning "healthy town": a name with roots, but not a limit. <em>Collective</em> means a group united by shared vision. Together: a global youth movement with deep roots and no borders.</p>
+   <p><strong>Tagline:</strong> One world. One collective. Supporting lines: Not a place. A people. · Every city. One crew. · Wherever the wave lands.</p>
+   <p><strong>Mission:</strong> To unite young people worldwide through culture, events, and enterprise, starting from Dar, belonging to everyone.</p>
+   <p><strong>Vision:</strong> A borderless youth collective where anyone, from any city, can create, hustle, and belong.</p>
+   <ul><li><strong>Hustle</strong> — we make our own bread</li><li><strong>Unity</strong> — one world, one crew</li><li><strong>Creativity</strong> — we create, we don't copy</li><li><strong>Respect</strong> — for culture, community, every member</li><li><strong>Openness</strong> — everyone welcome, all cities, all people</li></ul>
+   <p><strong>Origin story:</strong> Before Dar es Salaam had its name, it was called Mzizima, "the healthy town," a place where people came to build, trade, and live well. That spirit never died. It just needed a new home. Mzizima Collective is that home, for every young person, in every city, everywhere.</p>
+   <p><strong>Three arms:</strong> Social (events, meetups, sports, open mics), Enterprise (merch, events, talent, content, partnerships), Global (chapters worldwide, Mzizima Festival, culture export).</p>`],
+  ["Identity — Coastal Noir", `<ul><li><strong>Midnight Teal</strong> #0B2027 — base, backgrounds</li><li><strong>Pale Sand</strong> #E8DFD0 — main text, logo on dark</li><li><strong>Signal Coral</strong> #FF5A3C — CTAs, highlights, energy</li><li><strong>Bone</strong> #F5F1E8 — subtle and secondary text</li></ul>
+   <p>Usage ratio: 60% Midnight Teal, 30% Pale Sand / Bone, 10% Signal Coral. Vibe: editorial, cinematic, premium streetwear (think A24 films, Aimé Leon Dore, Noah). Photography: warm, moody, low-light; golden hour, neon, coastal.</p>
+   <p><strong>Voice:</strong> Bold. Short. Confident. Street-smart but welcoming. Not "We are a community-focused initiative…" but <em>"One world. One crew. Let's go."</em></p>`],
+  ["The Logo System", `<p>Primary wordmark <strong>MZIZIMA</strong> in Archivo Black; a version with the coral line and tagline; the <strong>MZC</strong> monogram icon in coral on teal; and a Midnight Teal version for light backgrounds.</p>
+   <ul><li>Minimum size: 40px wide digital, 20mm print</li><li>Clear space: the height of the "M" on all sides</li><li>On dark: Pale Sand or Coral. On light: Midnight Teal</li><li>Never add effects, rotate, outline, or stretch</li><li>The Dar es Salaam map is a secondary element only: hoodie back prints, poster backgrounds, chapter kits</li></ul>`],
+  ["Typography &amp; Visual Signatures", `<p>Logo and headlines: <strong>Archivo Black</strong> (or Anton). Subheads: <strong>Inter 600</strong>. Body: <strong>Inter 400</strong>. Accents: <strong>Bebas Neue</strong>. All free from Google Fonts.</p>
+   <ul><li>Heavy type, big scale</li><li>Coral used sparingly (10% of any design)</li><li>Grain and texture on posters for street feel</li><li>Coral underline under headlines as a signature</li><li>MZC monogram as a repeated mark</li></ul>`],
+  ["The Business", `<ul><li>Register as a sole proprietorship with BRELA; convert to Ltd when adding partners or investors.</li><li>Community is free to join. Members get perks, not equity.</li><li>Global chapters are licensed under the Mzizima brand; you own the trademark.</li></ul>
+   <p><strong>Registration steps (Tanzania):</strong> reserve the name at BRELA, register the sole proprietorship (~50,000–100,000 TZS), get a TIN from TRA, open a business bank account, then trademark later (ARIPO for Africa, WIPO for global).</p>
+   <p><strong>Money model (no membership fees):</strong> merch (pre-order only, from month 2), events (free or small fee, plus merch and drinks), sponsorships (from month 3), content monetization (month 1), talent (10–20% from signed DJs, artists, MCs, month 6), optional digital perks (month 6), global chapter licences (year 2).</p>
+   <p><em>Rule: members never pay to belong.</em> Money comes from products, experiences, and partnerships.</p>`],
+  ["The Products", `<p><strong>First merch drop (pre-order only, print after payment):</strong></p>
+   <ul><li>Hoodie — cost 25,000, sell 55,000, profit 30,000 TZS</li><li>Tee — cost 12,000, sell 30,000, profit 18,000 TZS</li><li>Cap (MZC embroidered) — cost 8,000, sell 20,000, profit 12,000 TZS</li><li>Tote — cost 5,000, sell 15,000, profit 10,000 TZS</li><li>Stickers (5 mini logos) — cost 1,000, sell 5,000, profit 4,000 TZS</li></ul>
+   <p>Global merch uses the same designs, print-on-demand (Printful/Printify) internationally and local printing in Dar. Future drops: artist collabs, chapter merch (Nairobi, Lagos, London), festival merch.</p>`],
+  ["The Events", `<ul><li><strong>Mzizima Nights</strong> — monthly: open mic, DJ, networking</li><li><strong>Mzizima Sports</strong> — quarterly: football, basketball, beach</li><li><strong>Mzizima Market</strong> — quarterly: pop-up shop, merch, food, art</li><li><strong>MZC World Festival</strong> — yearly: the biggest event</li><li><strong>Chapter Meetups</strong> — monthly per city</li></ul>
+   <p><strong>Mzizima Nights #1:</strong> a rooftop, beach, or free space. DJ, open mic, merch, networking. Entry free or 5,000 TZS. Goal: 100–200 youth, and film everything.</p>
+   <p><strong>Run of show:</strong> 4:00 setup · 5:00 doors · 6:00 open mic · 7:30 DJ set · 9:00 networking and merch · 10:00 wrap-up.</p>
+   <p><strong>Zero-budget version:</strong> free venue, borrowed sound, friend as DJ, pre-ordered merch only, free promotion. Total 0 TZS.</p>`],
+  ["The Content Strategy", `<p><strong>Platforms:</strong> TikTok (viral reach, daily), Instagram (brand, events, merch, daily), WhatsApp (community, invites, daily), YouTube (long-form, weekly), Discord (global community, at 200+ members).</p>
+   <p><strong>Pillars:</strong> culture and streets · member spotlights · behind the scenes · event recaps · merch drops · global vision stories.</p>
+   <p><strong>30-day calendar:</strong> Week 1, <em>Who We Are</em> (coming soon, what Mzizima means, founder story, vision). Week 2, <em>The Vision</em> (logo reveal, "open to everyone", merch teasers, Q&amp;A). Week 3, <em>The Hustle</em> (behind the scenes, "why no membership fees?", pre-order launch). Week 4, <em>The Movement</em> (event countdown, sponsor shoutout, live event stories, recap reel, "Mzizima Worldwide", call for chapter leaders).</p>`],
+  ["Growth Roadmap &amp; Global Chapters", `<ul><li><strong>Phase 1 — Dar (0–12 months):</strong> 1,000 members, 6 events, 3 merch drops</li><li><strong>Phase 2 — Tanzania (years 1–2):</strong> Arusha, Mwanza, Dodoma</li><li><strong>Phase 3 — Africa (years 2–4):</strong> Nairobi, Kampala, Lagos, Joburg</li><li><strong>Phase 4 — Global (year 4+):</strong> London, Dubai, NYC, Toronto, and the MZC World Festival</li></ul>
+   <p>Chapters are licensed and named <em>Mzizima [City]</em>. Any city can apply. The chapter leader runs local events, merch, and community. Revenue share: chapter 70%, HQ 30%. HQ provides brand assets, playbook, merch designs, and support. The launch kit covers logo files, brand guidelines, event template, merch designs, social templates, and welcome message and rules.</p>`],
+  ["The Team", `<p>Now: solo founder doing content, design, events, and sales. First hires: Creative Lead (after first merch profit, paid a % of merch sales), Events Lead (after the 3rd event, % of ticket sales), Growth Lead (after 500 members, commission), Chapter Leads (70/30 split). Volunteers help for perks: free merch, free entry, recognition.</p>`],
+  ["The Sponsorship Playbook", `<p><strong>Mindset:</strong> sponsors don't give money to people who need it; they give to those who can give back. Never "please sponsor us." Always "here's what we offer you."</p>
+   <p><strong>Five types of sponsors:</strong> local SMEs (easiest: barbershops, restaurants, phone shops), youth brands (energy drinks, betting, telcos), corporates (Vodacom, Airtel, Coca-Cola, NMB), NGOs and donors, global brands (later). Start with SMEs, prove yourself, climb.</p>
+   <p><strong>What sponsors pay for:</strong> logo placement 100,000–500,000 TZS · naming rights 500,000–2,000,000 · booth space 200,000–800,000 · content 150,000–600,000 · MC shoutouts 100,000–300,000 · audience access 300,000–1,000,000 · merch collab negotiable.</p>
+   <p><strong>The 7 steps:</strong> 1) build a one-page media kit; 2) build a target list of 20 companies; 3) send the first contact DM or email; 4) a 10-minute meeting (listen first, offer a tier, close soft); 5) a one-page proposal; 6) deliver and over-deliver (if they pay 500K, deliver 700K of value, then send a results report); 7) build long-term relationships.</p>
+   <p><strong>Fastest path now:</strong> host Mzizima Nights #1 free for 50 people → film everything, post 10 clips, reach 500 followers → make the media kit with results → DM 20 local SMEs with a Bronze tier (200,000 TZS) → close 3 sponsors (600,000 TZS) for event #2 → repeat and climb.</p>`],
+  ["The Community", `<p><strong>WhatsApp:</strong> "Mzizima Collective 🌊". Welcome message: <em>Karibu Mzizima Collective!</em> We are a global youth movement rooted in Dar es Salaam: event invites, merch drops, networking, opportunities. Rules: respect everyone; no spam; no politics or tribalism; hustle together, win together. Introduce yourself with name, city, and what you bring.</p>
+   <p><strong>Discord (later):</strong> #general, #events, #merch, #opportunities, #global-chapters. <strong>Handles:</strong> @mzizimacollective on IG, TikTok, and X; "Mzizima Collective" on YouTube.</p>`],
+  ["The 90-Day Launch", `<ul><li><strong>Month 1 — Foundation:</strong> finalize logo, create IG, TikTok, and WhatsApp, post 3x a week, recruit 5–10 founding members, write community rules</li><li><strong>Month 2 — First Drop:</strong> merch pre-orders (tees and stickers), Mzizima Nights #1, film everything, hit 500 followers</li><li><strong>Month 3 — Momentum:</strong> Mzizima Nights #2, approach 3 sponsors, reach 1,000 followers and 200 members, announce global chapters, register with BRELA</li></ul>`],
+  ["Assets, Trackers &amp; Mindset", `<p><strong>IG bio:</strong> MZIZIMA COLLECTIVE 🌊 · One world. One collective. · Events • Merch • Culture • Community · Every city. One crew. · DM to join.</p>
+   <p><strong>Hashtags:</strong> #MzizimaCollective #OneWorldOneCollective #EveryCityOneCrew #NotAPlaceAPeople #WhereverTheWaveLands #GlobalYouth #YouthMovement #MZIZIMA</p>
+   <p><strong>30-second origin video:</strong> soft drum beat → "Before Dar es Salaam had its name… it was called Mzizima." → city shots → "The healthy town. A place where people came to build." → youth, events, merch → "That spirit never died. It just needed a new home." → logo reveal → "Mzizima Collective. One world. One collective."</p>
+   <p><strong>Trackers:</strong> sponsorship, event, merch, and member trackers.</p>
+   <p><strong>Founder rules:</strong> start ugly · content is currency · own the name · think global from day one · no budget, no excuse.</p>`],
+  ["The 5 Next Steps", `<ul><li><strong>1 — Merch mockups:</strong> hoodie, tee, cap, tote in Coastal Noir, ready for pre-order</li><li><strong>2 — Social media kit:</strong> 9-post launch grid, TikTok covers, story templates, highlight covers, MZC profile picture</li><li><strong>3 — The magazine:</strong> the full brand journal as a print-ready PDF</li><li><strong>4 — Sponsor media kit:</strong> a one-page PDF ready for 20 SMEs</li><li><strong>5 — Community launch pack:</strong> welcome message, first 10 posts, DM script for founding members, launch-day checklist</li></ul>`]
+];
+
+function openReader() {
+  const el = document.getElementById('reader');
+  document.getElementById('readerInner').innerHTML =
+    `<div class="reader-cover"><h1>MZIZIMA</h1><div class="line"></div><p>Mzizima Collective<br>The Founding Journal · Volume 001<br>One world. One collective.</p></div>` +
+    MZC_SECTIONS.map((s, i) => `<section class="reader-sec"><h2><span>${String(i + 1).padStart(2, '0')}</span>${s[0]}</h2><div class="u"></div>${s[1]}</section>`).join('') +
+    `<div class="reader-end">Mzizima Collective · One world. One collective.<br>@mzizimacollective · DM to join<br>Founded in Dar es Salaam · Rooted everywhere</div>`;
+  el.classList.add('open');
+  el.setAttribute('aria-hidden', 'false');
+  el.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+function closeReader() {
+  const el = document.getElementById('reader');
+  el.classList.remove('open');
+  el.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
 /* ---- Mobile Nav ---- */
 function openMobileNav() {
   document.getElementById('mobileNav').classList.add('open');
@@ -1655,7 +1762,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') { closeCart(); closeMobileNav(); }
+  if (e.key === 'Escape') { closeCart(); closeMobileNav(); closeReader(); }
 });
 </script>
 
